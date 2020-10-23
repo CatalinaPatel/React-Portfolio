@@ -31,7 +31,7 @@ const HomepageHeading = ({ mobile }) => (
     <Container>
         {
             <Header as='h2'>
-                <p><Image src='./homepage.jpg' /></p>
+                <p><Image src='./home.png' /></p>
             </Header>
         }
         <Header
@@ -197,7 +197,7 @@ const Homepage = () => (
                         </Grid.Row>
                     </Grid.Column>
                     <Grid.Column floated='right' width={6}>
-                        <Image size='medium' important src='./Portrait.jpeg' bordered />
+                        <Image size='medium' important src='./me.jpeg' bordered />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -234,18 +234,19 @@ const Homepage = () => (
                 </Grid.Row>
             </Container>
         </Segment>
-        <Segment inverted vertical style={{ padding: '5em 0em' }}>
+        <Segment inverted vertical style={{ padding: '1em 0em' }}>
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
-                        <Grid.Column width={12}>
-                            <Header inverted as='h4' content='About' />
+                        <Grid.Column width={16}>
+                            <Header inverted as='h4' content='Catalina Patel ' />
                             <List link inverted>
-                                <List.Item as='a'>Sitemap</List.Item>
-                                <List.Item as='a'>Contact Us</List.Item>
-                                <List.Item as='a'>Religious Ceremonies</List.Item>
-                                <List.Item as='a'>Gazebo Plans</List.Item>
-                                <List.Item as='a'>Gazebo Plans</List.Item>
+                                <List.Item as='a'>#Visionary</List.Item>
+                                <List.Item as='a'>#Balanced</List.Item>
+                                <List.Item as='a'>#Consious</List.Item>
+                                <List.Item as='a'>#Determined</List.Item>
+                                <List.Item as='a'>#Change Leader</List.Item>
+                                <List.Item as='a'>#Innovative</List.Item>
                             </List>
                         </Grid.Column>
                         {/* <Grid.Column width={3}>
