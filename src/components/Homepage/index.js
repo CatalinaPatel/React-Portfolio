@@ -238,16 +238,17 @@ const Homepage = () => (
             <Container>
                 <Grid divided inverted stackable>
                     <Grid.Row>
-                        <Grid.Column width={3}>
+                        <Grid.Column width={12}>
                             <Header inverted as='h4' content='About' />
                             <List link inverted>
                                 <List.Item as='a'>Sitemap</List.Item>
                                 <List.Item as='a'>Contact Us</List.Item>
                                 <List.Item as='a'>Religious Ceremonies</List.Item>
                                 <List.Item as='a'>Gazebo Plans</List.Item>
+                                <List.Item as='a'>Gazebo Plans</List.Item>
                             </List>
                         </Grid.Column>
-                        <Grid.Column width={3}>
+                        {/* <Grid.Column width={3}>
                             <Header inverted as='h4' content='Services' />
                             <List link inverted>
                                 <List.Item as='a'>Banana Pre-Order</List.Item>
@@ -262,12 +263,12 @@ const Homepage = () => (
               </Header>
                             <p>
                                 Extra space for a call to action inside the footer that could help re-engage users.
-              </p>
-                        </Grid.Column>
+              </p> */}
+                        {/* </Grid.Column> */}
                     </Grid.Row>
                 </Grid>
             </Container>
         </Segment>
-    </ResponsiveContainer>
+    </ResponsiveContainer >
 )
 export default Homepage
