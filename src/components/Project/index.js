@@ -19,7 +19,7 @@ const Project = () => (
             </Card.Content>
         </Card>
         <Card color='pink'>
-            <Image link src='./password.png' wrapped ui={false} />
+            <Image link src='./eloof.png' wrapped ui={false} />
             <b style={{ marginBottom: '1em' }}>#santaRegistry</b>
             <Card.Content extra>
                 <Icon link name='github' />

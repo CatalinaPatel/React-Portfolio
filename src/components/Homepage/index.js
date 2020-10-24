@@ -23,10 +23,7 @@ const { MediaContextProvider, Media } = createMedia({
         computer: 1024,
     },
 })
-/* Heads up!
- * HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled
- * components for such things.
- */
+
 const HomepageHeading = ({ mobile }) => (
     <Container>
         {
@@ -48,10 +45,7 @@ const HomepageHeading = ({ mobile }) => (
 HomepageHeading.propTypes = {
     mobile: PropTypes.bool,
 }
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
+
 class DesktopContainer extends Component {
     state = {}
     hideFixedMenu = () => this.setState({ fixed: false })
@@ -165,10 +159,7 @@ MobileContainer.propTypes = {
     children: PropTypes.node,
 }
 const ResponsiveContainer = ({ children }) => (
-    /* Heads up!
-     * For large applications it may not be best option to put all page into these containers at
-     * they will be rendered twice for SSR.
-     */
+
     <MediaContextProvider>
         <DesktopContainer>{children}</DesktopContainer>
         <MobileContainer>{children}</MobileContainer>
@@ -187,7 +178,7 @@ const Homepage = () => (
                             #aboutMe
             </Header>
                         <p style={{ fontSize: '1.33em' }}>
-                            Passionate, driven, and diverse. Applying her Bachelor's degree in Industrial Design, a Lean Six Sigma Yellow Belt, and her experience over the last 7 years in the everchanging Healthcare Industry, she enjoys developing simple, yet practical applications. She hopes to continue to use this experience to create accesible (she is fluent in English and Spanish) and innovative applications to continue her legacy as an entrepreneur in a new industry.
+                            Passionate, driven, and diverse. I am applying my Bachelor's degree in Industrial Design, a Lean Six Sigma Yellow Belt, and experience over the last 7 years in the everchanging Healthcare Industry, I enjoy developing simple, yet practical applications. I hope to continue to use my experience to create accesible (I am fluent in English and Spanish) and innovative applications to continue my legacy as an entrepreneur in a new industry.
             </p>
                         <Grid.Row >
                             <Grid.Column textAlign='center'>
@@ -249,23 +240,6 @@ const Homepage = () => (
                                 <List.Item as='a'>#Innovative</List.Item>
                             </List>
                         </Grid.Column>
-                        {/* <Grid.Column width={3}>
-                            <Header inverted as='h4' content='Services' />
-                            <List link inverted>
-                                <List.Item as='a'>Banana Pre-Order</List.Item>
-                                <List.Item as='a'>DNA FAQ</List.Item>
-                                <List.Item as='a'>How To Access</List.Item>
-                                <List.Item as='a'>Favorite X-Men</List.Item>
-                            </List>
-                        </Grid.Column>
-                        <Grid.Column width={7}>
-                            <Header as='h4' inverted>
-                                Footer Header
-              </Header>
-                            <p>
-                                Extra space for a call to action inside the footer that could help re-engage users.
-              </p> */}
-                        {/* </Grid.Column> */}
                     </Grid.Row>
                 </Grid>
             </Container>
