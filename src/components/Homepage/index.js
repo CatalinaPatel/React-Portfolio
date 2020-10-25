@@ -2,6 +2,7 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Project from '../Project'
+import { Hashlink } from 'react-router-hash-link';
 import {
     Button,
     Container,
@@ -28,7 +29,7 @@ const HomepageHeading = ({ mobile }) => (
     <Container>
         {
             <Header as='h2'>
-                <p><Image src='./home.png' /></p>
+                <p style={{ marginTop: '1.5em', marginBottom: '1em' }}><Image size='mediumlarge' src='./home.png' centered /></p>
             </Header>
         }
         <Header
@@ -72,12 +73,13 @@ class DesktopContainer extends Component {
                             size='large'
                         >
                             <Container>
-                                <Menu.Item text='red' as='a' active>
+                                <Menu.Item text='teal' as='a' active>
                                     Catalina Patel
                 </Menu.Item>
-                                <Menu.Item color='red' as='a'>About Me</Menu.Item>
-                                <Menu.Item color='red' as='a'>Portfolio</Menu.Item>
-                                <Menu.Item as='a'>Contact</Menu.Item>
+                                <Menu.Item as={Hashlink} to="#aboutMe" >About Me</Menu.Item>
+                                <Menu.Item as={Hashlink} to="#portfolio" >Portfolio</Menu.Item>
+                                <Menu.Item as={Hashlink} to="#contact" >Contact</Menu.Item>
+
                                 <Menu.Item position='right'>
                                     <Icon link name='linkedin' />
                                     <Icon link style={{ marginLeft: '0.5em' }} name='github' />
@@ -114,15 +116,13 @@ class MobileContainer extends Component {
                         vertical
                         visible={sidebarOpened}
                     >
-                        <Menu.Item color='red' as='a' active>
+                        <Menu.Item color='teal' as='a' active>
                             Catalina Patel
             </Menu.Item>
-                        <Menu.Item color='red' as='a'>About Me</Menu.Item>
-                        <Menu.Item color='red' as='a'>Portfolio</Menu.Item>
-                        <Menu.Item color='red' as='a'>Contact</Menu.Item>
-                        <Menu.Item color='red' as='a'>Log in</Menu.Item>
-                        <Menu.Item color='red' as='a'>Sign Up</Menu.Item>
-                        <Menu.Item color='red' as='a'>Sign Up</Menu.Item>
+                        <Menu.Item color='teal' as='a'>About Me</Menu.Item>
+                        <Menu.Item color='teal' as='a'>Portfolio</Menu.Item>
+                        <Menu.Item color='teal' as='a'>Contact</Menu.Item>
+
                     </Sidebar>
                     <Sidebar.Pusher dimmed={sidebarOpened}>
                         <Segment
@@ -174,11 +174,11 @@ const Homepage = () => (
             <Grid container stackable verticalAlign='middle'>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                        <Header as='h3' style={{ fontSize: '2em', color: 'purple' }}>
+                        <Header href="Aboutme" as='h3' style={{ fontSize: '2em', color: 'purple' }}>
                             #aboutMe
             </Header>
                         <p style={{ fontSize: '1.33em' }}>
-                            Passionate, driven, and diverse. I am applying my Bachelor's degree in Industrial Design, a Lean Six Sigma Yellow Belt, and experience over the last 7 years in the everchanging Healthcare Industry, I enjoy developing simple, yet practical applications. I hope to continue to use my experience to create accesible (I am fluent in English and Spanish) and innovative applications to continue my legacy as an entrepreneur in a new industry.
+                            Passionate, driven, and diversity and inclusion supporter. I am applying my Bachelor's degree in Industrial Design, a Lean Six Sigma Yellow Belt, and experience over the last 7 years in the everchanging Healthcare Industry, I enjoy developing simple, yet practical applications. I hope to continue to use my experience to create accesible (I am fluent in English and Spanish) and innovative applications to continue my legacy as an entrepreneur in a new industry.
             </p>
                         <Grid.Row >
                             <Grid.Column textAlign='center'>
@@ -219,8 +219,8 @@ const Homepage = () => (
             <Container>
                 <Grid.Row columns={4}>
                     <Icon link color='teal' size='massive' name='mail' />
-                    <Icon link color='orange' size='massive' name='linkedin' />
-                    <Icon link color='purple' size='massive' name='github' />
+                    <Icon link color='orange' size='massive' name='linkedin' to='www.linkedin.com/in/catalina-patel' />
+                    <Icon link color='purple' size='massive' name='github' to='https://github.com/CatalinaPatel' />
                     <Icon link color='pink' size='massive' name='instagram' />
                 </Grid.Row>
             </Container>
