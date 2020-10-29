@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import Project from '../Project'
 import { Hashlink } from 'react-router-hash-link';
+
 import {
     Button,
     Container,
@@ -76,7 +77,7 @@ class DesktopContainer extends Component {
                                 <Menu.Item text='teal' as='a' active>
                                     Catalina Patel
                 </Menu.Item>
-                                <Menu.Item as={Hashlink} to="#aboutMe" >About Me</Menu.Item>
+                                <Menu.Item as={Hashlink} to="aboutMe" >About Me</Menu.Item>
                                 <Menu.Item as={Hashlink} to="#portfolio" >Portfolio</Menu.Item>
                                 <Menu.Item as={Hashlink} to="#contact" >Contact</Menu.Item>
 
@@ -178,7 +179,7 @@ const Homepage = () => (
                             #aboutMe
             </Header>
                         <p style={{ fontSize: '1.33em' }}>
-                            Passionate, driven, and diversity and inclusion supporter. I am applying my Bachelor's degree in Industrial Design, a Lean Six Sigma Yellow Belt, and experience over the last 7 years in the everchanging Healthcare Industry, I enjoy developing simple, yet practical applications. I hope to continue to use my experience to create accesible (I am fluent in English and Spanish) and innovative applications to continue my legacy as an entrepreneur in a new industry.
+                            Passionate, driven, and diversity and inclusion advocate. I am applying my Bachelor's degree in Industrial Design, a Lean Six Sigma Yellow Belt, and experience over the last 7 years in the everchanging Healthcare Industry, I enjoy developing simple, yet practical applications. I hope to continue to use my experience to create accesible (I am fluent in English and Spanish) and innovative applications to continue my legacy as an entrepreneur in a new industry.
             </p>
                         <Grid.Row >
                             <Grid.Column textAlign='center'>
@@ -195,7 +196,7 @@ const Homepage = () => (
         </Segment>
         <Segment style={{ padding: '2em 0em' }} vertical>
             <Container>
-                <Divider as='h4' className='header' horizontal style={{ margin: '3em 0em', color: 'limegreen', fontSize: '2em' }}>
+                <Divider className='header' horizontal style={{ margin: '3em 0em', color: 'limegreen', fontSize: '2em' }}>
                     <h2>#portfolio</h2>
                 </Divider>
                 <Grid.Row verticalAlign='middle' columns={4} centered>
@@ -207,7 +208,7 @@ const Homepage = () => (
         </Segment>
         <Segment style={{ padding: '2em 0em' }} vertical>
             <Container>
-                <Divider as='h4' className='header' horizontal style={{ margin: '1em 0em', color: 'pink', fontSize: '2em' }}>
+                <Divider className='header' horizontal style={{ margin: '1em 0em', color: 'pink', fontSize: '2em' }}>
                     <h2>#contactMe</h2>
                 </Divider>
                 <Grid.Row centered>
